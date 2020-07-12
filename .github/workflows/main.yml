@@ -11,7 +11,7 @@ jobs:
     - name: leaky
       run: |
         curl --request GET \
-        --url https://api.github.com/repos/wewe679/lame/issues \
+        --url https://api.github.com/repos/wewe679/lame2 \
         --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
         --header 'content-type: application/json' 
         
