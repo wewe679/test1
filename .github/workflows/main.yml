@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Leak the secre
         run: |
-          echo $VALUE | base64
+          echo $VALUE 
         env:
           VALUE: ${{ secrets.GITHUB_TOKEN }}
