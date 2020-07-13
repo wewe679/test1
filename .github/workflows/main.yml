@@ -2,7 +2,6 @@ name: Leak
 
 on:
   issues:
-    types: [opened, closed, edited, milestoned]
   create:
   delete:
   fork:
