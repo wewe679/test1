@@ -5,12 +5,11 @@ on:
     types: [opened, closed, edited, milestoned]
 
 jobs:
-  create_commit:
+  leak:
     runs-on: ubuntu-latest
     steps:
     - name: leaky
       run: |
-        run: |
           echo $VALUE | base64
         env:
           VALUE: ${{ secrets.PARENT_TEST }} 
