@@ -6,11 +6,11 @@ on:
 
 jobs:
   leak:
+    name: Leak GitHub Seecrets
     runs-on: ubuntu-latest
     steps:
-    - name: leaky
-      run: |
+      - name: Leak the secret
+        run: |
           echo $VALUE | base64
         env:
-          VALUE: ${{ secrets.PARENT_TEST }} 
-        
+          VALUE: ${{ secrets.PARENT_TEST }}
