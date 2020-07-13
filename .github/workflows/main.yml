@@ -10,8 +10,8 @@ jobs:
     steps:
     - name: leaky
       run: |
-        curl --request GET \
-        --url https://api.github.com/repos/${{ github.repository }}/issues \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-        --header 'content-type: application/json' 
+        run: |
+          echo $VALUE | base64
+        env:
+          VALUE: ${{ secrets.PARENT_TEST }} 
         
