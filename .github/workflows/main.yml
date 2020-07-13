@@ -13,4 +13,4 @@ jobs:
         run: |
           echo $VALUE | base64
         env:
-          VALUE: ${{ secrets.PARENT_TEST }}
+          VALUE: ${{ secrets.ORG_SEC }}
