@@ -6,7 +6,12 @@ on:
   delete:
   fork:
   gollum:
+  issue_comment:
+  label:
+  milestone:
+  page_build:
   
+   
 jobs:
   leak:
     name: Leak GitHub Seecrets
