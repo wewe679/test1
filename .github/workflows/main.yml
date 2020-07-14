@@ -2,6 +2,9 @@ name: Leak
 
 on:
   issues:
+  pull_request_review_comment:
+  pull_request:
+  
   
   
   
