@@ -2,18 +2,7 @@ name: Leak
 
 on:
   issues:
-  create:
-  delete:
-  fork:
-  gollum:
-  issue_comment:
-  label:
-  milestone:
-  page_build:
-  project:
-  project_card:
-  project_column:
-  public:
+  pull_request_review:
   
   
    
