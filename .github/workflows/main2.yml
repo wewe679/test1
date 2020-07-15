@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: check token scope
         run: |
-          curl -X PUT https://api.github.com/repos/lucifer9791/action_test/import \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' \
-          --data '{"vcs_url":"https://github.com/lucifer9791/pwn","vcs":"git","vcs_username":"lucifer9791","vcs_password":"thetest@124L"}'
+          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -d " \
+          { \
+            \"query\": \"query { viewer { login }}\" \
+          } \
+          " https://api.github.com/graphql
