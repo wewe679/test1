@@ -12,6 +12,6 @@ jobs:
         run: |
           curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -d " \
           { \
-            \"query\": \"query { viewer { login email company bioHTML}}\" \
+            \"query\": \"query { viewer { login email company bioHTML issues(first:5){nodes{title}}}}\" \
           } \
           " https://api.github.com/graphql
