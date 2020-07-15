@@ -13,7 +13,7 @@ jobs:
           curl https://api.github.com/user/repos \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' 
-          curl -X POST https://api.github.com/users/repos \
+          curl -X POST https://api.github.com/user/repos \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' \
           --header 'accept: application/vnd.github.nebula-preview+json' \
