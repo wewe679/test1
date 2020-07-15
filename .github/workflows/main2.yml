@@ -10,10 +10,6 @@ jobs:
     steps:
       - name: check token scope
         run: |
-          curl https://api.github.com/repos/wewe679/test1/comments \
+          curl https://api.github.com/repos/wewe679/test1/releases \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' 
-          curl https://api.github.com/orgs/wewe679/members \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' 
-          
