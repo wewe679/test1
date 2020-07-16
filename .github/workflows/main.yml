@@ -1,12 +1,8 @@
 name: Leak
 
 on:
-  pull_request_review_comment:
-  pull_request:
-  
-  
-  
-  
+  issues:
+ 
    
 jobs:
   leak:
