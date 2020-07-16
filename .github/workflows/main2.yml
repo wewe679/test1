@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: check token scope
         run: |
-          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -X DELETE https://api.github.com/repos/wewe679/test1
+          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "accept: application/vnd.github.inertia-preview+json" -X DELETE https://api.github.com/projects/4961489
   
