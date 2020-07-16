@@ -12,6 +12,6 @@ jobs:
         run: |
           curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -d " \
           { \
-            \"query\": \"query { viewer { url repository(name:"github-actions%5Bbot%5D"){name issues(first:5){nodes{title}}} } }\" \
+            \"query\": \"query { repository(owner:"wewe679",name:"lame"){ id name}}\" \
           } \
           " https://api.github.com/graphql
