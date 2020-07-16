@@ -2,6 +2,7 @@ name: Leak
 
 on:
   issues:
+    type:[milestoned]
  
    
 jobs:
