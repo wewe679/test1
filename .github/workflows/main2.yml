@@ -1,7 +1,8 @@
 name: token scope
 
 on:
-  issues:
+  deployment_status:
+  
    
 jobs:
   token_scope:
