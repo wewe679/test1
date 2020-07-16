@@ -4,7 +4,7 @@ on:
     inputs:
       name:
         description: 'Person to greet'
-        required: true
+        required: false
         default: 'Mona the Octocat'
       home:
         description: 'location'
@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Hello ${{ github.event.inputs.name }}!"
+        echo "Hello ${{ github.event.inputs.ORG_SEC }}!"
         echo "- in ${{ github.event.inputs.home }}!"
