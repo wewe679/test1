@@ -5,7 +5,7 @@ on:
       name:
         description: 'Person to greet'
         required: false
-        default: 'https://github.com/wewe679/test1/issues/11'
+        default: '><h1>heelo</h1>'
       home:
         description: 'location'
         required: false
